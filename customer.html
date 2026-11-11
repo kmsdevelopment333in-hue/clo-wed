@@ -1,0 +1,125 @@
+<!-- Officemail — DEMO CUSTOMER PORTAL (static preview, sample data only) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Portal — Officemail (Demo)</title>
+  <meta name="theme-color" content="#2E3A46" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mobilebar"><button class="sidebar-toggle" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><a class="brand" href="index.html" style="font-size:15px"><div class="logo" style="width:30px;height:30px;font-size:12px">OM</div><div>Officemail<small>DEMO</small></div></a></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" style="padding:6px 12px 12px">
+        <div class="logo">OM</div>
+        <div>Officemail<small>DEMO — My Portal</small></div></a>
+      <div class="group">Demo pages</div>
+      <a href="owner.html">Owner Panel</a>
+      <a href="staff.html">Staff Panel</a>
+      <a href="customer.html">Customer Portal</a>
+      <a href="receipt.html">Sample Receipt</a>
+      <a class="active" href="#" data-target="#page-dash">My Dashboard</a>
+      <div class="group">Services</div>
+      <a href="#" data-target="#page-services">Browse Services</a>
+      <a href="#" data-target="#page-requests">My Requests</a>
+      <div class="group">Payments</div>
+      <a href="#" data-target="#page-payments">Pay &amp; History</a>
+      <a href="#" data-target="#page-receipts">Receipts</a>
+      <div class="group">Account</div>
+      <a href="#" data-target="#page-profile">Profile</a>
+      <a href="index.html" style="margin-top:auto">← Back to demo home</a>
+    </aside>
+
+    <main class="main">
+      <div class="main-header">
+        <h1>My Dashboard</h1>
+        <div class="right">
+          <span class="badge badge-amber">DEMO DATA</span>
+          <div class="avatar">CA</div>
+        </div>
+      </div>
+      <div class="note">Static demo preview of the <b>Customer Portal</b>. In the live system customers can only ever see their own records.</div>
+
+      <!-- DASH -->
+      <section data-page id="page-dash">
+        <div class="grid grid-4">
+          <div class="card"><h3>Customer ID</h3><p style="font-size:20px;font-weight:800;color:var(--primary)">CUS-2026-000412</p><p class="muted">Quoted for every enquiry</p></div>
+          <div class="stat amber"><div class="label">Pending payments</div><div class="value">₹1,500</div><div class="sub">1 request awaiting payment</div></div>
+          <div class="stat"><div class="label">Service requests</div><div class="value">6</div><div class="sub">1 open, 5 completed</div></div>
+          <div class="stat green"><div class="label">Receipts</div><div class="value">5</div><div class="sub">all downloadable PDF</div></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Fast actions</h3><p>Request a new service, pay a pending bill, or download a past receipt.</p><a class="btn btn-sm btn-primary" href="#" data-target="#page-services">Request a service</a></div>
+          <div class="card"><h3>Notifications</h3><p>Emails are sent on payment success, receipt generation, password reset and service updates. Delivery is shown honestly.</p></div>
+          <div class="card"><h3>Security</h3><p>Login via email + password. Password reset by email link (1 hour validity).</p></div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section data-page hidden id="page-services">
+        <div class="main-header" style="margin-bottom:10px"><h2>Available Services</h2></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Sample Document Filing</h3><p>Filing of sample documents with the concerned office. 3 working days.</p><p style="font-size:17px;font-weight:800;margin-top:8px">₹500.00</p><button class="btn btn-sm btn-primary" style="margin-top:8px">Request &amp; pay</button></div>
+          <div class="card"><h3>Sample Registration Package</h3><p>Complete application assistance end-to-end. Weekly status updates. 7 days.</p><p style="font-size:17px;font-weight:800;margin-top:8px">₹1,500.00</p><button class="btn btn-sm btn-primary" style="margin-top:8px">Request &amp; pay</button></div>
+          <div class="card"><h3>Sample Certificate Service</h3><p>Certificate processing and collection. Typical turnaround 5 days.</p><p style="font-size:17px;font-weight:800;margin-top:8px">₹750.00</p><button class="btn btn-sm btn-primary" style="margin-top:8px">Request &amp; pay</button></div>
+        </div>
+      </section>
+
+      <!-- REQUESTS -->
+      <section data-page hidden id="page-requests">
+        <div class="main-header" style="margin-bottom:10px"><h2>My Service Requests</h2></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Request</th><th>Service</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>SR-2026-000512</td><td>Sample Registration Package</td><td>₹1,500.00</td><td><span class="badge badge-slate">REQUESTED</span></td><td><button class="btn btn-sm btn-primary">Pay now</button></td></tr>
+            <tr><td>SR-2026-000502</td><td>Sample Document Filing</td><td>₹500.00</td><td><span class="badge badge-blue">IN PROGRESS</span></td><td><button class="btn btn-sm btn-outline">Details</button></td></tr>
+            <tr><td>SR-2026-000244</td><td>Sample Certificate Service</td><td>₹750.00</td><td><span class="badge badge-green">COMPLETED</span></td><td><button class="btn btn-sm btn-outline">Receipt</button></td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <!-- PAYMENTS -->
+      <section data-page hidden id="page-payments">
+        <div class="main-header" style="margin-bottom:10px"><h2>Payments</h2></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Payment Ref</th><th>Item</th><th>Method</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>PAY-2026-4c1f8820</td><td>Sample Registration Package</td><td>—</td><td>₹1,500.00</td><td><span class="badge badge-amber">PENDING</span></td><td><button class="btn btn-sm btn-primary">Pay via UPI/Card/NetBanking</button></td></tr>
+            <tr><td>PAY-2026-q4af83b1</td><td>Sample Certificate Service</td><td>Online · Razorpay</td><td>₹750.00</td><td><span class="badge badge-green">PAID</span></td><td><button class="btn btn-sm btn-outline">Receipt</button></td></tr>
+            <tr><td>PAY-2026-9f2d1101</td><td>Sample Document Filing</td><td>Online · Razorpay</td><td>₹500.00</td><td><span class="badge badge-green">PAID</span></td><td><button class="btn btn-sm btn-outline">Receipt</button></td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="margin-top:8px">You pay through the secure Razorpay checkout (UPI, cards, net banking). The office confirms your receipt automatically after verification.</p>
+      </section>
+
+      <!-- RECEIPTS -->
+      <section data-page hidden id="page-receipts">
+        <div class="main-header" style="margin-bottom:10px"><h2>My Receipts</h2></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Receipt No</th><th>Date</th><th>Item</th><th>Total</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td>RCP-2026-004763</td><td>2026-11-09</td><td>Sample Certificate Service</td><td>₹750.00</td><td><button class="btn btn-sm btn-outline">Download PDF</button> <button class="btn btn-sm btn-outline">Print</button></td></tr>
+            <tr><td>RCP-2026-004701</td><td>2026-10-28</td><td>Sample Document Filing</td><td>₹500.00</td><td><button class="btn btn-sm btn-outline">Download PDF</button> <button class="btn btn-sm btn-outline">Print</button></td></tr>
+          </tbody>
+        </table></div>
+        <a class="btn btn-sm btn-outline" style="margin-top:10px" href="receipt.html">View a full receipt example →</a>
+      </section>
+
+      <!-- PROFILE -->
+      <section data-page hidden id="page-profile">
+        <div class="grid grid-3">
+          <div class="card"><h3>My details</h3><p>CUS-2026-000412 · Sample Customer A<br/>98765 43210 · customer@example.com</p></div>
+          <div class="card"><h3>Change password</h3><p>Change your password anytime; other sessions are logged out after the change.</p></div>
+          <div class="card"><h3>Address</h3><p>Update your address so receipts show correct "Billed To" details.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

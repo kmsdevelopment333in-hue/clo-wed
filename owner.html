@@ -1,0 +1,232 @@
+<!-- Officemail — DEMO OWNER PANEL (static preview, sample data only) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owner Panel — Officemail (Demo)</title>
+  <meta name="theme-color" content="#2E3A46" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mobilebar"><button class="sidebar-toggle" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><a class="brand" href="index.html" style="font-size:15px"><div class="logo" style="width:30px;height:30px;font-size:12px">OM</div><div>Officemail<small>DEMO</small></div></a></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" style="padding:6px 12px 12px">
+        <div class="logo">OM</div>
+        <div>Officemail<small>DEMO — Owner</small></div></a>
+      <div class="group">Demo pages</div>
+      <a href="owner.html" class="active">Owner Panel</a>
+      <a href="staff.html">Staff Panel</a>
+      <a href="customer.html">Customer Portal</a>
+      <a href="receipt.html">Sample Receipt</a>
+      <a class="active" href="#" data-target="#page-dashboard">Dashboard</a>
+      <div class="group">Customers</div>
+      <a href="#" data-target="#page-customers">Customers</a>
+      <div class="group">Operations</div>
+      <a href="#" data-target="#page-services">Services</a>
+      <a href="#" data-target="#page-staff">Staff &amp; Roles</a>
+      <div class="group">Finance</div>
+      <a href="#" data-target="#page-payments">Payments</a>
+      <a href="#" data-target="#page-receipts">Receipts</a>
+      <a href="#" data-target="#page-expenses">Expenses</a>
+      <a href="#" data-target="#page-reports">Reports</a>
+      <div class="group">System</div>
+      <a href="#" data-target="#page-settings">Settings</a>
+      <a href="#" data-target="#page-audit">Audit Logs</a>
+      <a href="index.html" style="margin-top:auto">← Back to demo home</a>
+    </aside>
+
+    <main class="main">
+      <div class="main-header">
+        <h1 id="page-title">Owner Dashboard</h1>
+        <div class="right">
+          <span class="badge badge-amber">DEMO DATA</span>
+          <div class="avatar">RA</div>
+        </div>
+      </div>
+      <div class="note">This is a <b>static demo preview</b> of the Owner panel. All figures are example data, not real business information.</div>
+
+      <!-- DASHBOARD -->
+      <section data-page id="page-dashboard">
+        <div class="grid grid-4">
+          <div class="stat"><div class="label">Total Customers</div><div class="value">1,248</div><div class="sub">+34 this month</div></div>
+          <div class="stat"><div class="label">Total Staff</div><div class="value">12</div><div class="sub">1 account suspended</div></div>
+          <div class="stat"><div class="label">Total Receipts</div><div class="value">4,763</div><div class="sub">sequential numbering</div></div>
+          <div class="stat"><div class="label">Total Payments</div><div class="value">5,014</div><div class="sub">incl. pending &amp; failed</div></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="grid grid-4">
+          <div class="stat green"><div class="label">Income — Today</div><div class="value">₹18,450</div><div class="sub">7 receipts issued</div></div>
+          <div class="stat green"><div class="label">Income — This Month</div><div class="value">₹4,12,300</div><div class="sub">verified payments only</div></div>
+          <div class="stat green"><div class="label">Income — This Year</div><div class="value">₹38,70,150</div><div class="sub">net of processed refunds</div></div>
+          <div class="stat amber"><div class="label">Pending Payments</div><div class="value">₹22,500</div><div class="sub">16 requests awaiting payment</div></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="chart">
+          <div class="chart-title">Monthly revenue (verified payments) <span class="badge badge-slate">sample chart</span></div>
+          <svg viewBox="0 0 560 180">
+            <rect x="20"  y="80" width="34" height="100" rx="3" class="bar"></rect>
+            <rect x="60"  y="60" width="34" height="120" rx="3" class="bar"></rect>
+            <rect x="100" y="95" width="34" height="85"  rx="3" class="bar"></rect>
+            <rect x="140" y="45" width="34" height="135" rx="3" class="bar"></rect>
+            <rect x="180" y="55" width="34" height="125" rx="3" class="bar"></rect>
+            <rect x="220" y="70" width="34" height="110" rx="3" class="bar"></rect>
+            <rect x="260" y="35" width="34" height="145" rx="3" class="bar"></rect>
+            <rect x="300" y="50" width="34" height="130" rx="3" class="bar"></rect>
+            <rect x="340" y="65" width="34" height="115" rx="3" class="bar"></rect>
+            <rect x="380" y="40" width="34" height="140" rx="3" class="bar"></rect>
+            <rect x="420" y="30" width="34" height="150" rx="3" class="bar"></rect>
+            <rect x="460" y="20" width="34" height="160" rx="3" class="bar"></rect>
+            <text class="axis-label" x="20"  y="192">Apr</text>
+            <text class="axis-label" x="100" y="192">Jun</text>
+            <text class="axis-label" x="180" y="192">Aug</text>
+            <text class="axis-label" x="260" y="192">Oct</text>
+            <text class="axis-label" x="340" y="192">Dec</text>
+            <text class="axis-label" x="420" y="192">Feb</text>
+          </svg>
+        </div>
+        <div class="spacer"></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Failed payments</h3><p>14 in last 30 days (sample). Customers were notified automatically; receipts were <b>never</b> issued for these.</p></div>
+          <div class="card"><h3>Refunds</h3><p>2 processed refunds recorded. Reference IDs and reasons kept in the auditable refund ledger.</p></div>
+          <div class="card"><h3>Quick actions</h3><p> Add service ·  Add staff ·  Search receipt ·  Export monthly report (CSV / PDF / Excel)</p></div>
+        </div>
+      </section>
+
+      <!-- CUSTOMERS -->
+      <section data-page hidden id="page-customers">
+        <div class="main-header" style="margin-bottom:10px"><h2>Customers</h2><div class="right"><input style="width:220px" placeholder="Search name / Customer ID / mobile" /><button class="btn btn-primary btn-sm">+ New Customer</button></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Customer ID</th><th>Name</th><th>Mobile</th><th>Status</th><th>Requests</th><th>Lifetime Value</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>CUS-2026-000412</td><td>Sample Customer A</td><td>98765 43210</td><td><span class="badge badge-green">Active</span></td><td>6</td><td>₹42,750</td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+            <tr><td>CUS-2026-000413</td><td>Sample Customer B</td><td>91234 56780</td><td><span class="badge badge-green">Active</span></td><td>2</td><td>₹9,500</td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+            <tr><td>CUS-2026-000414</td><td>Sample Customer C</td><td>97711 23334</td><td><span class="badge badge-slate">Inactive</span></td><td>0</td><td>—</td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="margin-top:8px">142 more rows — paginated in the real system. Search works by name, ID, mobile or email.</p>
+      </section>
+
+      <!-- SERVICES -->
+      <section data-page hidden id="page-services">
+        <div class="main-header" style="margin-bottom:10px"><h2>Services</h2><div class="right"><button class="btn btn-primary btn-sm">+ New Service</button></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Category</th><th>Service</th><th>Price</th><th>Duration</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>Documents</td><td>Sample Document Filing</td><td>₹500.00</td><td>3 days</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+            <tr><td>Compliance</td><td>Sample Registration Package</td><td>₹1,500.00</td><td>7 days</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+            <tr><td>Other Services</td><td>Sample Certificate Service</td><td>₹750.00</td><td>—</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+            <tr><td>Documents</td><td>Sample Legacy Service (retired)</td><td>₹300.00</td><td>—</td><td><span class="badge badge-red">Inactive</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="margin-top:8px">Services, categories, prices, durations and discounts are owner-configurable — no code changes needed.</p>
+      </section>
+
+      <!-- STAFF & ROLES -->
+      <section data-page hidden id="page-staff">
+        <div class="main-header" style="margin-bottom:10px"><h2>Staff &amp; Roles</h2><div class="right"><button class="btn btn-primary btn-sm">+ Add Staff</button></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Employee Code</th><th>Name</th><th>Role</th><th>Status</th><th>Per. granted</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>EMP-2026-000021</td><td>Sample Staff — Front Desk</td><td>STAFF</td><td><span class="badge badge-green">Active</span></td><td>9 of 9</td><td><button class="btn btn-sm btn-outline">Permissions</button> <button class="btn btn-sm btn-danger">Suspend</button></td></tr>
+            <tr><td>EMP-2026-000022</td><td>Sample Staff — Assistant</td><td>STAFF</td><td><span class="badge badge-green">Active</span></td><td>5 of 9</td><td><button class="btn btn-sm btn-outline">Permissions</button> <button class="btn btn-sm btn-danger">Suspend</button></td></tr>
+            <tr><td>EMP-2026-000019</td><td>Sample Staff — Suspended</td><td>STAFF</td><td><span class="badge badge-red">Suspended</span></td><td>—</td><td><button class="btn btn-sm btn-primary">Activate</button></td></tr>
+          </tbody>
+        </table></div>
+        <div class="spacer"></div>
+        <div class="card"><h3>Permission control</h3><p>The owner grants each staff role specific permissions, e.g.: customers.create · customers.update · requests.update · payments.record_offline · reports.view · receipts.read_all. Staff can never see owner-only financial settings or unrestricted admin controls.</p></div>
+      </section>
+
+      <!-- PAYMENTS -->
+      <section data-page hidden id="page-payments">
+        <div class="main-header" style="margin-bottom:10px"><h2>Payments</h2><div class="right"><select style="width:160px"><option>All statuses</option><option>Paid</option><option>Pending</option><option>Failed</option><option>Refunded</option></select></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Payment Ref</th><th>Service</th><th>Method</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>
+            <tr><td>PAY-2026-q4af83b1</td><td>Sample Document Filing</td><td>Online · Razorpay</td><td>₹500.00</td><td><span class="badge badge-green">PAID</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+            <tr><td>PAY-2026-c27ec5b5</td><td>Sample Certificate Service</td><td>Offline · Cash</td><td>₹750.00</td><td><span class="badge badge-green">PAID</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+            <tr><td>PAY-2026-bd0113f2</td><td>Sample Registration Package</td><td>Online · Razorpay</td><td>₹1,500.00</td><td><span class="badge badge-amber">PENDING</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+            <tr><td>PAY-2026-991a2fe0</td><td>Sample Document Filing</td><td>Online · Razorpay</td><td>₹500.00</td><td><span class="badge badge-red">FAILED</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="margin-top:8px">A payment only becomes PAID after gateway webhook verification (or an owner-authorized offline record). Refund button appears for verified payments (owner only).</p>
+      </section>
+
+      <!-- RECEIPTS -->
+      <section data-page hidden id="page-receipts">
+        <div class="main-header" style="margin-bottom:10px"><h2>Receipts</h2><div class="right"><input style="width:280px" placeholder="Search receipt no / customer ID / mobile / txn id" /></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Receipt No</th><th>Customer</th><th>Service</th><th>Total</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td>RCP-2026-004763</td><td>CUS-2026-000412</td><td>Sample Certificate Service</td><td>₹750.00</td><td><span class="badge badge-green">ISSUED</span></td><td><button class="btn btn-sm btn-outline">PDF</button> <button class="btn btn-sm btn-outline">Print</button></td></tr>
+            <tr><td>RCP-2026-004762</td><td>CUS-2026-000413</td><td>Sample Registration Package</td><td>₹1,455.00</td><td><span class="badge badge-green">ISSUED</span></td><td><button class="btn btn-sm btn-outline">PDF</button> <button class="btn btn-sm btn-outline">Print</button></td></tr>
+            <tr><td>RCP-2026-004740</td><td>CUS-2026-000401</td><td>Sample Legacy Service</td><td>₹300.00</td><td><span class="badge badge-red">CANCELLED (refunded)</span></td><td><button class="btn btn-sm btn-outline">View history</button></td></tr>
+          </tbody>
+        </table></div>
+        <a class="btn btn-sm btn-outline" style="margin-top:10px" href="receipt.html">Open full receipt example →</a>
+      </section>
+
+      <!-- EXPENSES -->
+      <section data-page hidden id="page-expenses">
+        <div class="main-header" style="margin-bottom:10px"><h2>Expenses</h2><div class="right"><button class="btn btn-primary btn-sm">+ Record Expense</button></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Date</th><th>Category</th><th>Description</th><th>Amount</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>2026-11-09</td><td>Utilities</td><td>Sample electricity bill</td><td>₹3,120.00</td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+            <tr><td>2026-11-05</td><td>Rent</td><td>Sample office rent — Nov</td><td>₹25,000.00</td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+            <tr><td>2026-11-02</td><td>Stationery</td><td>Sample printer paper</td><td>₹640.00</td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <!-- REPORTS -->
+      <section data-page hidden id="page-reports">
+        <div class="main-header" style="margin-bottom:10px"><h2>Reports</h2>
+          <div class="right"><input type="date" style="width:150px" value="2026-11-01" /> <input type="date" style="width:150px" value="2026-11-10" />
+            <button class="btn btn-sm btn-outline">Export CSV</button><button class="btn btn-sm btn-outline">Export Excel</button><button class="btn btn-sm btn-outline">Export PDF</button></div>
+        </div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Service (period)</th><th>Requests</th><th>Verified revenue</th><th>Offline share</th></tr></thead>
+          <tbody>
+            <tr><td>Sample Registration Package</td><td>86</td><td>₹1,27,000</td><td>22%</td></tr>
+            <tr><td>Sample Document Filing</td><td>212</td><td>₹1,06,000</td><td>18%</td></tr>
+            <tr><td>Sample Certificate Service</td><td>131</td><td>₹98,250</td><td>9%</td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="margin-top:8px">Revenues count verified payments only; pending/failed/refunded never inflate income. Daily / weekly / monthly / annual breakdowns, staff activity and receipt reports included.</p>
+      </section>
+
+      <!-- SETTINGS -->
+      <section data-page hidden id="page-settings">
+        <div class="grid grid-3">
+          <div class="card"><h3>Business profile</h3><p>Business name, address, contact details, GSTIN/ID (optional), settings for the receipt header.</p></div>
+          <div class="card"><h3>Receipt template</h3><p>Receipt number prefix, footer note, signature line, logo toggle. Upload the official logo.</p></div>
+          <div class="card"><h3>Invoice &amp; tax</h3><p>GST invoice fields stay disabled until you confirm book-keeping needs. Enabling produces tax invoices with tax lines.</p></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>Notification settings</h3><p>Email on/off, optional SMS and WhatsApp (works only with a provider configured; delivery is honestly reported from provider confirmation).</p></div>
+          <div class="card"><h3>Payment gateway</h3><p>Razorpay test mode first; live keys added through environment configuration — never stored in the database or frontend.</p></div>
+          <div class="card"><h3>Backups &amp; security</h3><p>Database backup files with restore procedure documented; audit log retention; rate limits and login throttling.</p></div>
+        </div>
+      </section>
+
+      <!-- AUDIT -->
+      <section data-page hidden id="page-audit">
+        <div class="table-wrap"><table>
+          <thead><tr><th>When</th><th>Actor</th><th>Action</th><th>Entity</th><th>IP</th></tr></thead>
+          <tbody>
+            <tr><td>2026-11-10 11:42</td><td>Owner</td><td>RECEIPT_CANCELLED</td><td>Receipt RCP-2026-004740</td><td>103.25.7.11</td></tr>
+            <tr><td>2026-11-10 11:40</td><td>Staff EMP-21</td><td>OFFLINE_PAYMENT_RECORDED</td><td>PAY-2026-c27ec5b5</td><td>103.25.7.14</td></tr>
+            <tr><td>2026-11-10 10:59</td><td>System</td><td>PAYMENT_VERIFIED</td><td>PAY-2026-q4af83b1 (webhook)</td><td>—</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

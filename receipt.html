@@ -1,0 +1,92 @@
+<!-- Officemail — SAMPLE RECEIPT PREVIEW (static demo) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sample Receipt — Officemail (Demo)</title>
+  <meta name="theme-color" content="#2E3A46" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><div class="logo">OM</div><div>Officemail<small>Sample receipt preview</small></div></div></a>
+    <nav class="nav">
+      <span class="demo-mode">DEMO</span>
+      <a href="owner.html">Owner Panel</a>
+      <a href="staff.html">Staff Panel</a>
+      <a href="customer.html">Customer Portal</a>
+      <a href="receipt.html">Sample Receipt</a>
+    </nav>
+    <button class="btn btn-sm btn-outline" onclick="window.print()">Print</button>
+    <button class="menu-toggle" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </header>
+
+  <main class="container">
+    <div class="note">This shows the look of the automatic PDF receipt produced by the system for every verified payment. All sample data.</div>
+
+    <div class="receipt">
+      <div class="r-header">
+        <div>
+          <div class="biz">(Your Office Name)</div>
+          <div class="biz-meta">
+            Office address line 1, Office address line 2<br/>
+            Ph: 90000 00000 • office@example.com
+          </div>
+        </div>
+        <div style="width:64px;height:64px;border:2px dashed var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--muted)">LOGO</div>
+      </div>
+
+      <div class="title">PAYMENT RECEIPT</div>
+
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <div class="r-meta"><b>Receipt No:</b> RCP-2026-004763</div>
+          <div class="r-meta"><b>Issue Date:</b> 09 Nov 2026</div>
+          <div class="r-meta"><b>Payment Ref:</b> PAY-2026-q4af83b1</div>
+          <div class="r-meta"><b>Payment Method:</b> Online — UPI (verified)</div>
+          <div class="r-meta"><b>Transaction ID:</b> pay_Qx7Yb2Nk1mZ4cA</div>
+        </div>
+        <div style="font-size:13px">
+          <b>Billed To</b><br/>
+          Sample Customer A<br/>
+          CUS-2026-000412<br/>
+          Sample office address<br/>
+          Ph: 98765 43210
+        </div>
+      </div>
+
+      <table>
+        <thead><tr><th style="width:55%">Description</th><th>Qty</th><th style="text-align:right">Unit (₹)</th><th style="text-align:right">Amount (₹)</th></tr></thead>
+        <tbody>
+          <tr><td>Sample Certificate Service (SR-2026-000244)</td><td>1</td><td style="text-align:right">750.00</td><td style="text-align:right">750.00</td></tr>
+        </tbody>
+      </table>
+
+      <table class="totals" style="font-size:13px">
+        <tbody>
+          <tr><td>Subtotal</td><td>750.00</td></tr>
+          <tr><td>Discount</td><td>0.00</td></tr>
+          <tr><td>Tax</td><td>0.00</td></tr>
+          <tr class="grand"><td>TOTAL PAID</td><td>750.00</td></tr>
+        </tbody>
+      </table>
+
+      <div class="words"><b>Amount in words:</b> Rupees Seven Hundred Fifty Only</div>
+      <div class="words muted">Payment status: <b style="color:var(--green)">PAID — verified</b> • Computer generated receipt</div>
+
+      <div class="sig">
+        <div class="muted">For (Your Office Name)</div>
+        <div class="line">Authorised Signatory</div>
+      </div>
+
+      <div class="footer-note">This is a computer generated receipt and is digitally valid without physical signature. Thank you for your business.</div>
+    </div>
+
+    <p class="muted" style="text-align:center;margin:18px">In the real system this exact layout is generated as a PDF (PDFKit) with the owner's uploaded logo and business profile filled in from Settings.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

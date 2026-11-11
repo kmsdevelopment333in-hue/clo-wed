@@ -1,0 +1,140 @@
+<!-- Officemail — DEMO STAFF PANEL (static preview, sample data only) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staff Panel — Officemail (Demo)</title>
+  <meta name="theme-color" content="#2E3A46" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mobilebar"><button class="sidebar-toggle" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><a class="brand" href="index.html" style="font-size:15px"><div class="logo" style="width:30px;height:30px;font-size:12px">OM</div><div>Officemail<small>DEMO</small></div></a></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="index.html" style="padding:6px 12px 12px">
+        <div class="logo">OM</div>
+        <div>Officemail<small>DEMO — Staff</small></div></a>
+      <div class="group">Demo pages</div>
+      <a href="owner.html">Owner Panel</a>
+      <a href="staff.html">Staff Panel</a>
+      <a href="customer.html">Customer Portal</a>
+      <a href="receipt.html">Sample Receipt</a>
+      <a class="active" href="#" data-target="#page-dash">My Dashboard</a>
+      <div class="group">Work</div>
+      <a href="#" data-target="#page-customers">Customers</a>
+      <a href="#" data-target="#page-requests">Service Requests</a>
+      <a href="#" data-target="#page-services">Service Catalog</a>
+      <div class="group">Finance (limited)</div>
+      <a href="#" data-target="#page-payments">Payments</a>
+      <a href="#" data-target="#page-receipts">Receipts</a>
+      <div class="group">Account</div>
+      <a href="#" data-target="#page-profile">My Profile</a>
+      <a href="index.html" style="margin-top:auto">← Back to demo home</a>
+    </aside>
+
+    <main class="main">
+      <div class="main-header">
+        <h1>Staff Dashboard</h1>
+        <div class="right">
+          <span class="badge badge-amber">DEMO DATA</span>
+          <div class="avatar">PS</div>
+        </div>
+      </div>
+      <div class="note">Static demo preview of the <b>Staff</b> panel. Staff permissions are configured by the owner — this demo shows full staff permissions.</div>
+
+      <!-- DASH -->
+      <section data-page id="page-dash">
+        <div class="grid grid-4">
+          <div class="stat"><div class="label">My customers</div><div class="value">61</div><div class="sub">created by me</div></div>
+          <div class="stat amber"><div class="label">Open requests</div><div class="value">9</div><div class="sub">assigned to me</div></div>
+          <div class="stat"><div class="label">Scheduled offline payments</div><div class="value">2</div><div class="sub">awaiting collection</div></div>
+          <div class="stat green"><div class="label">Receipts issued this week</div><div class="value">14</div><div class="sub">includes online verified</div></div>
+        </div>
+        <div class="spacer"></div>
+        <div class="grid grid-3">
+          <div class="card"><h3>New customer</h3><p>Create a customer record with a unique Customer ID in seconds; optionally give them portal access.</p><a class="btn btn-sm btn-primary" href="#" data-target="#page-customers">Go to Customers</a></div>
+          <div class="card"><h3>New service request</h3><p>Pick a customer + service, apply discounts if permitted, track status.</p><a class="btn btn-sm btn-primary" href="#" data-target="#page-requests">Go to Requests</a></div>
+          <div class="card"><h3>Record offline payment</h3><p>Record cash/UPI/bank/cheque collections with reference IDs — every record is authorized and audited.</p><a class="btn btn-sm btn-primary" href="#" data-target="#page-payments">Go to Payments</a></div>
+        </div>
+      </section>
+
+      <!-- CUSTOMERS -->
+      <section data-page hidden id="page-customers">
+        <div class="main-header" style="margin-bottom:10px"><h2>Customers</h2><div class="right"><input style="width:240px" placeholder="Search name / Customer ID / mobile" /><button class="btn btn-primary btn-sm">+ New Customer</button></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Customer ID</th><th>Name</th><th>Mobile</th><th>Status</th><th>My requests</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>CUS-2026-000419</td><td>Sample Customer D</td><td>98201 55667</td><td><span class="badge badge-green">Active</span></td><td>3</td><td><button class="btn btn-sm btn-outline">Edit</button> <button class="btn btn-sm btn-outline">New Request</button></td></tr>
+            <tr><td>CUS-2026-000420</td><td>Sample Customer E</td><td>97005 12082</td><td><span class="badge badge-green">Active</span></td><td>1</td><td><button class="btn btn-sm btn-outline">Edit</button> <button class="btn btn-sm btn-outline">New Request</button></td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <!-- REQUESTS -->
+      <section data-page hidden id="page-requests">
+        <div class="main-header" style="margin-bottom:10px"><h2>Service Requests</h2><div class="right"><button class="btn btn-primary btn-sm">+ New Request</button></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Request</th><th>Customer</th><th>Service</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>SR-2026-000512</td><td>CUS-2026-000419</td><td>Sample Document Filing</td><td>₹500.00</td><td><span class="badge badge-blue">IN PROGRESS</span></td><td><button class="btn btn-sm btn-outline">Update</button> <button class="btn btn-sm btn-primary">Take payment</button></td></tr>
+            <tr><td>SR-2026-000509</td><td>CUS-2026-000420</td><td>Sample Registration Package</td><td>₹1,500.00</td><td><span class="badge badge-slate">ACCEPTED</span></td><td><button class="btn btn-sm btn-outline">Update</button> <button class="btn btn-sm btn-primary">Take payment</button></td></tr>
+            <tr><td>SR-2026-000505</td><td>CUS-2026-000419</td><td>Sample Certificate Service</td><td>₹750.00</td><td><span class="badge badge-green">COMPLETED</span></td><td><button class="btn btn-sm btn-outline">Receipt</button></td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <!-- SERVICES -->
+      <section data-page hidden id="page-services">
+        <div class="table-wrap"><table>
+          <thead><tr><th>Category</th><th>Service</th><th>Price</th><th>Duration</th></tr></thead>
+          <tbody>
+            <tr><td>Documents</td><td>Sample Document Filing</td><td>₹500.00</td><td>3 days</td></tr>
+            <tr><td>Compliance</td><td>Sample Registration Package</td><td>₹1,500.00</td><td>7 days</td></tr>
+            <tr><td>Other Services</td><td>Sample Certificate Service</td><td>₹750.00</td><td>—</td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="margin-top:8px">Staff see the catalog read-only. Only the owner can change services and prices.</p>
+      </section>
+
+      <!-- PAYMENTS -->
+      <section data-page hidden id="page-payments">
+        <div class="main-header" style="margin-bottom:10px"><h2>Payments</h2><div class="right"><select style="width:150px"><option>All</option><option>Paid</option><option>Pending</option></select> <button class="btn btn-primary btn-sm">+ Record offline payment</button></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Payment Ref</th><th>Service</th><th>Method</th><th>Amount</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>PAY-2026-88aa71c2</td><td>Sample Document Filing</td><td>Offline · UPI (ref 4120…)</td><td>₹500.00</td><td><span class="badge badge-green">PAID</span></td><td><button class="btn btn-sm btn-outline">Receipt</button></td></tr>
+            <tr><td>PAY-2026-ad77cy1f</td><td>Sample Registration Package</td><td>Online · Razorpay</td><td>₹1,500.00</td><td><span class="badge badge-amber">PENDING</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="margin-top:8px">Recording an offline payment requires the owner-granted permission "payments.record_offline". Duplicate reference IDs are rejected automatically.</p>
+      </section>
+
+      <!-- RECEIPTS -->
+      <section data-page hidden id="page-receipts">
+        <div class="main-header" style="margin-bottom:10px"><h2>Receipts</h2><div class="right"><input style="width:260px" placeholder="Search receipt no / mobile / txn id" /></div></div>
+        <div class="table-wrap"><table>
+          <thead><tr><th>Receipt No</th><th>Customer</th><th>Total</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td>RCP-2026-004755</td><td>CUS-2026-000419</td><td>₹500.00</td><td><span class="badge badge-green">ISSUED</span></td><td><button class="btn btn-sm btn-outline">PDF</button> <button class="btn btn-sm btn-outline">Print</button></td></tr>
+            <tr><td>RCP-2026-004748</td><td>CUS-2026-000420</td><td>₹750.00</td><td><span class="badge badge-green">ISSUED</span></td><td><button class="btn btn-sm btn-outline">PDF</button> <button class="btn btn-sm btn-outline">Print</button></td></tr>
+          </tbody>
+        </table></div>
+        <p class="muted" style="margin-top:8px">Cancellation belongs to the owner only, with a recorded reason and preserved history.</p>
+      </section>
+
+      <!-- PROFILE -->
+      <section data-page hidden id="page-profile">
+        <div class="grid grid-2 grid-3">
+          <div class="card"><h3>My details</h3><p>EMP-2026-000021 · Sample Staff — Front Desk<br/>Joined Mar 2026</p></div>
+          <div class="card"><h3>Change password</h3><p>Current password + new password (min 8 chars). All other sessions are logged out after a change.</p></div>
+          <div class="card"><h3>My activity</h3><p>My logins, records created, offline payments recorded, requests updated.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

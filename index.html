@@ -1,0 +1,93 @@
+<!-- Officemail — DEMO LANDING PAGE (static preview, no backend) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover" />
+  <title>Officemail — Office &amp; Payment Receipt Management (Demo)</title>
+  <meta name="theme-color" content="#2E3A46" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <div class="logo">OM</div>
+      <div>Officemail<small>Office Management &amp; Automated Receipts</small></div></a>
+    <nav class="nav">
+      <span class="demo-mode">DEMO PREVIEW</span>
+      <a href="owner.html">Owner Panel</a>
+      <a href="staff.html">Staff Panel</a>
+      <a href="customer.html">Customer Portal</a>
+      <a href="receipt.html">Sample Receipt</a>
+      
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </header>
+
+  <div class="hero">
+    <h1>Run your office, accept payments and issue receipts — automatically.</h1>
+    <p class="lead">
+      A complete office management system: service requests, online payments (UPI, cards &amp; net banking),
+      automatic professional PDF receipts, customer records, staff activity and financial reports.
+    </p>
+    <div class="cta">
+      <a class="btn btn-primary" href="customer.html">View Customer Portal Demo</a>
+      <a class="btn btn-outline" href="owner.html">View Owner Panel Demo</a>
+    </div>
+  </div>
+
+  <section>
+    <h2 class="section-title">Three separate panels, one system</h2>
+    <p class="section-sub">Each user role gets its own secure, purpose-built interface.</p>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Owner / Super Admin</h3>
+        <p>Full control — dashboard, customers, staff &amp; roles, services, payments, refunds, expenses, reports (CSV/PDF), settings, audit logs.</p>
+        <div class="spacer"></div>
+        <a class="btn btn-sm btn-outline" href="owner.html">Open demo panel →</a>
+      </div>
+      <div class="card">
+        <h3>Staff Panel</h3>
+        <p>Add customers, create service requests, record authorized offline payments, search receipts, track their own activity — with owner-configurable permissions.</p>
+        <div class="spacer"></div>
+        <a class="btn btn-sm btn-outline" href="staff.html">Open demo panel →</a>
+      </div>
+      <div class="card">
+        <h3>Customer Portal</h3>
+        <p>Unique Customer ID, browse services &amp; charges, submit service requests, pay online, download &amp; print receipts, view purchase history.</p>
+        <div class="spacer"></div>
+        <a class="btn btn-sm btn-outline" href="customer.html">Open demo portal →</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <h2 class="section-title">Key capabilities</h2>
+    <p class="section-sub">Fee-free misleading claims — just what the system does.</p>
+    <div class="grid grid-4">
+      <div class="card"><h3>Online payments</h3><p>Razorpay checkout — UPI, cards and net banking, with server-verified payment confirmation.</p></div>
+      <div class="card"><h3>Auto receipts</h3><p>Unique sequential receipt numbers and downloadable PDF receipts generated on verified payment.</p></div>
+      <div class="card"><h3>Reports</h3><p>Daily, monthly and yearly income, service-wise revenue, refunds and expenses — exportable.</p></div>
+      <div class="card"><h3>Secure</h3><p>Email + password login, role-based access, audit trail, HTTPS-ready and database backups.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">How a payment flows</h2>
+    <p class="section-sub">Receipts are issued only for verified payments — never on frontend "success" alone.</p>
+    <div class="grid grid-4">
+      <div class="card"><h3>1. Request</h3><p>Customer picks a service (or staff creates a request) and price is calculated.</p></div>
+      <div class="card"><h3>2. Pay</h3><p>Pays via UPI / card / net banking using the payment checkout.</p></div>
+      <div class="card"><h3>3. Verify</h3><p>The payment gateway notifies the server; the server verifies the signature and amounts.</p></div>
+      <div class="card"><h3>4. Receipt</h3><p>A unique receipt number is issued and the PDF receipt becomes available.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    Officemail demo preview - static screenshots mapped to the in-development production system.  Developed by <b>KMS DEVELOPMENT</b>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
